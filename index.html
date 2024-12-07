@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOXES</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .grid-container {
+            display: grid;
+            gap: 2px;
+            width: 90vw;
+            height: auto;
+        }
+
+        .box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+            border: 1px solid black;
+        }
+
+        .a { background-color: #5a67d8; }
+        .b { background-color: #4c51bf; }
+        .c { background-color: #667eea; }
+        .d { background-color: #6b46c1; }
+        .e { background-color: #7f9cf5; }
+        .f { background-color: #9f7aea; }
+        .g { background-color: #b794f4; }
+        .h { background-color: #d6bcfa; }
+        .i { background-color: #9f7aea; }
+
+        .grid-container {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto;
+            
+        }
+        @media (min-width: 768px) {
+            .grid-container {
+                grid-template-areas: 
+                    "a a a a a "
+                    "b c c d d "
+                    "b e f g h "
+                    "b i i i i ";
+                grid-template-rows: 1fr 2fr 2fr 1fr;
+                grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+                height: 90vh;
+            }
+
+            .a { grid-area: a; }
+            .b { grid-area: b; }
+            .c { grid-area: c; }
+            .d { grid-area: d; }
+            .e { grid-area: e; }
+            .f { grid-area: f; }
+            .g { grid-area: g; }
+            .h { grid-area: h; }
+            .i { grid-area: i; }
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="box a">a</div>
+        <div class="box b">b</div>
+        <div class="box c">c</div>
+        <div class="box d">d</div>
+        <div class="box e">e</div>
+        <div class="box f">f</div>
+        <div class="box g">g</div>
+        <div class="box h">h</div>
+        <div class="box i">i</div>
+    </div>
+</body>
+</html>
